@@ -32,6 +32,7 @@
                 <!-- End Nav-->
             </div>
             </header>
+
                  <!-- Begin Main Content -->
                  <main>
 <h1>Contacting Us</h1>
@@ -96,7 +97,7 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
                 <!-- End Main Content-->
                 <section>
                     <ul id="partners">
-                        <li class="partner">
+                       <!-- <li class="partner">
                             <img src="images/partners/partner-bustour.png" alt="Partner Bus Tour">
                         </li>
                         <li class="partner">
@@ -113,7 +114,7 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
                         </li>
                         <li class="partner">
                             <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                        </li>
+                        </li> -->
                     </ul>
                   </section>
         </div>
@@ -135,4 +136,34 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
         </div>
      </footer>
      <!-- End Footer Information -->
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+       
+               const partners = [
+                   { src: "images/partners/partner-bustour.png", alt: "Partner Bus Tour" },
+                   { src: "images/partners/partner-cabinrental.png", alt: "Partner Cabin Rental" },
+                   { src: "images/partners/partner-campingadv.png", alt: "Partner Camping Adventure" },
+                   { src: "images/partners/partner-collegetours.png", alt: "Partner College Tours" },
+                   { src: "images/partners/partner-rentalbike.png", alt: "Partner Bike Ride" },
+                   { src: "images/partners/partner-tourgroup.png", alt: "Partner Tour Group" }
+               ];
+   
+               const ul = document.getElementById('partners');
+   
+               partners.forEach(function(partner) {
+                   const li = document.createElement('li');
+                   li.classList.add('partner'); 
+   
+                   const img = document.createElement('img');
+                   img.src = partner.src;  
+                   img.alt = partner.alt;  
+   
+                   li.appendChild(img);
+   
+                   ul.appendChild(li);
+               });
+           });
+   </script>    
+   
 </html>
